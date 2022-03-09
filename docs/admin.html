@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="style/main.css" />
+    <title>PMS - admin</title>
+  </head>
+  <body>
+    <!-- Admin registration section -->
+    <!-- <div class="page-section hidden">
+      <form id="register-form-admin">
+        <label for="register-form-admin-name"> Name </label>
+        <input id="register-form-admin-name" type="text" name="name" />
+        <label for="register-form-admin-password"> Password </label>
+        <input
+          id="register-form-admin-password"
+          type="password"
+          name="password"
+          autocomplete
+        />
+        <input type="submit" value="register" />
+      </form>
+    </div> -->
+
+    <!-- Admin login section -->
+    <div id="admin-login-section" class="page-section">
+      <div><span>Sign In</span></div>
+      <form id="login-form-admin">
+        <label for="login-form-admin-name"> Name </label>
+        <input id="login-form-admin-name" name="name" type="text" />
+        <label for="login-form-admin-password"> Password </label>
+        <input
+          id="login-form-admin-password"
+          type="password"
+          name="password"
+          autocomplete
+        />
+        <input type="submit" value="login" />
+      </form>
+    </div>
+
+    <!-- Admin home section -->
+    <div id="admin-home-section" class="page-section hidden">
+      <div>
+        <span data-inner-admin-name>n/a</span>
+      </div>
+
+      <div class="content-injection">
+        <button id="navigate-btn-lots-section">Parking Lots</button>
+        <button id="navigate-btn-requests-section">Requests</button>
+        <button id="navigate-btn-manage-users-section">Manage Users</button>
+        <button id="navigate-btn-messages-section">Messages</button>
+      </div>
+    </div>
+
+    <!-- Lot selection section -->
+    <div id="lot-selection-section" class="page-section hidden">
+      <span data-inner-admin-name>n/a</span>
+      <div class="content-injection"></div>
+    </div>
+
+    <!-- Selected lot grid section -->
+    <div id="lot-selected-section" class="page-section hidden">
+      <div>
+        <span data-inner-admin-name>n/a</span>
+      </div>
+
+      <div>
+        <span data-inner-lot-name>n/a</span>
+      </div>
+
+      <div class="sub-section">
+        <div><span>Details</span></div>
+        <div>
+          <span>ID:&nbsp;</span>
+          <span data-inner-lot-uid>n/a</span>
+        </div>
+        <div>
+          <span>Coordinate:&nbsp;</span>
+          <span data-inner-lot-coordinate>n/a</span>
+        </div>
+        <div>
+          <span>Total Spaces:&nbsp;</span><span data-inner-lot-spaces>0</span>
+        </div>
+        <div>
+          <span>Opened Spaces:&nbsp;</span><span data-inner-spot-opened>0</span>
+        </div>
+        <div>
+          <span>Occupied Spaces:&nbsp;</span>
+          <span data-inner-spot-occupied>0</span>
+        </div>
+        <div>
+          <span>Reserved Spaces:&nbsp;</span
+          ><span data-inner-spot-reserved>0</span>
+        </div>
+      </div>
+
+      <div class="content-injection"></div>
+
+      <div class="sub-section">
+        <button id="navigate-btn-requests-section">Requests</button>
+        <button id="navigate-btn-manage-users-section">Manage Users</button>
+        <button id="navigate-btn-messages-section">Messages</button>
+        <!-- selected spot info -->
+        <div>
+          <div>
+            <div><span>Selected Spot</span></div>
+          </div>
+          <div>
+            <div><span>ID: </span><span data-inner-spot-uid>n/a</span></div>
+          </div>
+          <div>
+            <div>
+              <span>Status: </span><span data-inner-spot-state>n/a</span>
+            </div>
+          </div>
+          <button id="action-btn-spot-reserved" disabled>Reserve</button>
+          <button id="action-btn-spot-opened" disabled>Open</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin actionable requests section -->
+    <div id="admin-requests-section" class="page-section hidden">
+      <div>
+        <span data-inner-admin-name>n/a</span>
+      </div>
+
+      <div>
+        <span>Requests</span>
+      </div>
+
+      <form id="action-form-admin-requests-selection">
+        <div class="content-injection"></div>
+        <div>
+          <input
+            id="action-btn-request-automate"
+            type="button"
+            value="Automate Selection"
+          />
+          <input
+            id="action-btn-request-accept"
+            type="button"
+            value="Accept Selection"
+          />
+          <input
+            id="action-btn-request-reject"
+            type="button"
+            value="Reject Selection"
+          />
+        </div>
+      </form>
+
+      <div class="sub-section">
+        <button id="navigate-btn-lots-section">Parking Lots</button>
+        <button id="navigate-btn-manage-users-section">Manage Users</button>
+        <button id="navigate-btn-messages-section">Messages</button>
+      </div>
+    </div>
+
+    <!-- section -->
+    <!-- <div class="page-section hidden">
+      <form id="register-form-lot">
+        <label for="register-form-lot-name"> Name </label>
+        <input id="register-form-lot-name" type="text" name="name" />
+        <label for="register-form-lot-coordinate"> Coordinate </label>
+        <input
+          id="register-form-lot-coordinate"
+          type="text"
+          name="coordinate"
+        />
+        <label for="register-form-lot-capacity"> Capacity </label>
+        <input id="register-form-lot-capacity" type="number" name="capacity" />
+        <input type="submit" value="register" />
+      </form>
+    </div> -->
+
+    <!-- section -->
+    <!-- <div class="page-section hidden">
+      <form id="send-form-message-admin">
+        <label for="send-form-message-admin-to-user-uid"> To </label>
+        <select
+          id="send-form-message-admin-to-user-uid"
+          name="user-uid"
+          multiple
+        >
+          <option value="">--Please choose a person--</option>
+        </select>
+        <label for="send-form-message-admin-title"> Title </label>
+        <input id="send-form-message-admin-title" name="title" type="text" />
+        <label for="send-form-message-admin-content"> Message </label>
+        <textarea
+          id="send-form-message-admin-content"
+          cols="30"
+          rows="5"
+          name="content"
+        ></textarea>
+        <input type="submit" value="send" />
+      </form>
+    </div> -->
+
+    <script type="module" src="script/pms.js"></script>
+    <script type="text/javascript" src="script/index.js" defer></script>
+  </body>
+</html>

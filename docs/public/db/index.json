@@ -1,0 +1,217 @@
+{
+  "ADMINS": [
+    {
+      "uid": "fb32f7b168414",
+      "ORM": "ADMINS",
+      "name": "master 1",
+      "password": "123"
+    },
+    {
+      "uid": "be9aac5d11f39",
+      "ORM": "ADMINS",
+      "name": "master 2",
+      "password": "123"
+    }
+  ],
+  "DRIVERS": [
+    {
+      "uid": "d897faeb3aa9d",
+      "ORM": "DRIVERS",
+      "name": "alpha b",
+      "email": "alpha.b@gmail.com",
+      "password": "123",
+      "state": "active"
+    },
+    {
+      "uid": "cac17f4e2da27",
+      "ORM": "DRIVERS",
+      "name": "beta j",
+      "email": "beta.j@gmail.com",
+      "password": "123",
+      "state": "active"
+    },
+    {
+      "uid": "bae12f4e2da27",
+      "ORM": "DRIVERS",
+      "name": "gamma x",
+      "email": "gama.x@gmail.com",
+      "password": "123",
+      "state": "active"
+    },
+    {
+      "uid": "71fe30718465a",
+      "ORM": "DRIVERS",
+      "name": "lambda z",
+      "email": "lambda.z@gmail.com",
+      "password": "123",
+      "state": "active"
+    }
+  ],
+  "PAYMENTS": [
+    {
+      "uid": "1803ac8cab4c",
+      "ORM": "PAYMENTS",
+      "driverUID": "d897faeb3aa9d",
+      "name": "Alpha Bravo",
+      "ccn": "1234567890",
+      "ccv": "123",
+      "exp": "2030-01",
+      "state": "active"
+    },
+    {
+      "uid": "2ee8dfb8a5f1d",
+      "ORM": "PAYMENTS",
+      "driverUID": "cac17f4e2da27",
+      "name": "Beta Jane",
+      "ccn": "1234567890",
+      "ccv": "123",
+      "exp": "2030-01",
+      "state": "active"
+    },
+    {
+      "uid": "71fe30718465a",
+      "ORM": "PAYMENTS",
+      "driverUID": "bae12f4e2da27",
+      "name": "Gamma Xi",
+      "ccn": "1234567890",
+      "ccv": "123",
+      "exp": "2030-01",
+      "state": "active"
+    }
+  ],
+  "LOTS": [
+    {
+      "uid": "4c2d2a10fbd2a",
+      "ORM": "LOTS",
+      "name": "Medical Park",
+      "coordinate": "00-00-01",
+      "state": "opened",
+      "spots": [
+        {
+          "uid": "8af43e876250f",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "85afd64917c0a",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "81670d1c79c4b",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "7280beec90cff",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "36d05f8a6f2b2",
+          "type": "standard",
+          "state": "opened"
+        }
+      ]
+    },
+    {
+      "uid": "0ffdc2aa29df7",
+      "ORM": "LOTS",
+      "name": "Sports Park",
+      "coordinate": "00-00-02",
+      "state": "opened",
+      "spots": [
+        {
+          "uid": "b55faff9ad3f5",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "bc5b2fcd3d7a6",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "cd0be5881ec22",
+          "type": "standard",
+          "state": "opened"
+        },
+        {
+          "uid": "97e2e5cd642e2",
+          "type": "standard",
+          "state": "opened"
+        }
+      ]
+    }
+  ],
+  "REQUESTS": [
+    {
+      "uid": "322044c380b0b",
+      "ORM": "REQUESTS",
+      "start": "Tue Mar 08 2022 19:30:00",
+      "end": "Thu Mar 10 2022 21:29:00",
+      "lotUID": "0ffdc2aa29df7",
+      "paymentUID": "1803ac8cab4c",
+      "spotType": "standard",
+      "state": "pending"
+    },
+    {
+      "uid": "e3af5d664d572",
+      "ORM": "REQUESTS",
+      "start": "Tue Mar 29 2022 10:32:00",
+      "end": "Thu Mar 31 2022 19:31:00",
+      "lotUID": "4c2d2a10fbd2a",
+      "paymentUID": "2ee8dfb8a5f1d",
+      "spotType": "standard",
+      "state": "pending"
+    },
+    {
+      "uid": "8a687987ee41c",
+      "ORM": "REQUESTS",
+      "start": "Tue Apr 26 2022 14:36:00",
+      "end": "Fri Apr 29 2022 00:36:00",
+      "lotUID": "0ffdc2aa29df7",
+      "paymentUID": "2ee8dfb8a5f1d",
+      "spotType": "standard",
+      "state": "pending"
+    }
+  ],
+  "MESSAGES": [
+    {
+      "uid": "1c30b512ea86f",
+      "ORM": "MESSAGES",
+      "toUserUID": "d897faeb3aa9d",
+      "fromUserUID": "e31aa4304c301",
+      "title": "Service update",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "state": "delivered"
+    },
+    {
+      "uid": "f86afa53a932e",
+      "ORM": "MESSAGES",
+      "toUserUID": "cac17f4e2da27",
+      "fromUserUID": "e31aa4304c301",
+      "title": "Service update",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "state": "delivered"
+    },
+    {
+      "uid": "a47fec804ba3a",
+      "ORM": "MESSAGES",
+      "toUserUID": "bae12f4e2da27",
+      "fromUserUID": "e31aa4304c301",
+      "title": "Service update",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "state": "delivered"
+    },
+    {
+      "uid": "b3e531dfe0125",
+      "ORM": "MESSAGES",
+      "toUserUID": "71fe30718465a",
+      "fromUserUID": "e31aa4304c301",
+      "title": "Service update",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "state": "delivered"
+    }
+  ]
+}

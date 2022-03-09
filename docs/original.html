@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMS</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <!-- section -->
+    <strong><br />register admin<br /></strong>
+    <form id="register-form-admin">
+      <label for="register-form-admin-name"> Name </label>
+      <input id="register-form-admin-name" type="text" name="name" />
+      <label for="register-form-admin-password"> Password </label>
+      <input
+        id="register-form-admin-password"
+        type="password"
+        name="password"
+        autocomplete
+      />
+      <input type="submit" value="register" />
+    </form>
+
+    <!-- section -->
+    <strong><br />register driver<br /></strong>
+    <form id="register-form-driver">
+      <label for="register-form-driver-name"> Name </label>
+      <input id="register-form-driver-name" type="text" name="name" />
+      <label for="register-form-driver-email"> Email </label>
+      <input id="register-form-driver-email" type="email" name="email" />
+      <label for="register-form-driver-password"> Password </label>
+      <input
+        id="register-form-driver-password"
+        type="password"
+        name="password"
+        autocomplete
+      />
+      <input type="submit" value="register" />
+    </form>
+
+    <!-- section -->
+    <strong><br />login admin<br /></strong>
+    <form id="login-form-admin">
+      <label for="login-form-admin-name"> Name </label>
+      <input id="login-form-admin-name" name="name" type="text" />
+      <label for="login-form-admin-password"> Password </label>
+      <input
+        id="login-form-admin-password"
+        type="password"
+        name="password"
+        autocomplete
+      />
+      <input type="submit" value="login" />
+    </form>
+
+    <!-- section -->
+    <strong><br />login driver<br /></strong>
+    <form id="login-form-driver">
+      <label for="login-form-driver-email"> Email </label>
+      <input id="login-form-driver-email" type="email" name="email" />
+      <label for="login-form-driver-password"> Password </label>
+      <input
+        id="login-form-driver-password"
+        type="password"
+        name="password"
+        autocomplete
+      />
+      <input type="submit" value="login" />
+    </form>
+
+    <!-- section -->
+    <strong><br />register lot<br /></strong>
+    <form id="register-form-lot">
+      <label for="register-form-lot-name"> Name </label>
+      <input id="register-form-lot-name" type="text" name="name" />
+      <label for="register-form-lot-coordinate"> Coordinate </label>
+      <input id="register-form-lot-coordinate" type="text" name="coordinate" />
+      <label for="register-form-lot-capacity"> Capacity </label>
+      <input id="register-form-lot-capacity" type="number" name="capacity" />
+      <input type="submit" value="register" />
+    </form>
+
+    <!-- section -->
+    <strong><br />register payment<br /></strong>
+    <form id="register-form-payment">
+      <label for="register-form-payment-name"> Name </label>
+      <input id="register-form-payment-name" type="text" name="name" />
+      <label for="register-form-payment-card-no"> Card No. </label>
+      <input id="register-form-payment-card-no" type="text" name="card-no" />
+      <label for="register-form-payment-ccv"> CCV </label>
+      <input id="register-form-payment-ccv" type="text" name="ccv" />
+      <label for="register-form-payment-expiry-date"> Expiry Date </label>
+      <input
+        id="register-form-payment-expiry-date"
+        type="month"
+        name="expiry-date"
+      />
+      <input type="submit" value="register" />
+    </form>
+
+    <!-- section -->
+    <strong><br />register request<br /></strong>
+    <form id="register-form-request">
+      <label for="register-form-request-lot-uid"> Parking Lots </label>
+      <select id="register-form-request-lot-uid" name="lot-uid">
+        <option value="">--Please choose an option--</option>
+      </select>
+      <label for="register-form-request-payment-uid"> Payment </label>
+      <select id="register-form-request-payment-uid" name="payment-uid">
+        <option value="">--Please choose an option--</option>
+      </select>
+      <label for="register-form-request-start"> Start </label>
+      <input
+        id="register-form-request-start"
+        type="datetime-local"
+        name="start"
+      />
+      <label for="register-form-request-end"> End </label>
+      <input id="register-form-request-end" type="datetime-local" name="end" />
+      <input type="submit" value="send" />
+    </form>
+
+    <!-- section -->
+    <strong><br />admin send message<br /></strong>
+    <form id="send-form-message-admin">
+      <label for="send-form-message-admin-to-user-uid"> To </label>
+      <select id="send-form-message-admin-to-user-uid" name="user-uid" multiple>
+        <option value="">--Please choose a person--</option>
+      </select>
+      <label for="send-form-message-admin-title"> Title </label>
+      <input id="send-form-message-admin-title" name="title" type="text" />
+      <label for="send-form-message-admin-content"> Message </label>
+      <textarea
+        id="send-form-message-admin-content"
+        cols="30"
+        rows="5"
+        name="content"
+      ></textarea>
+      <input type="submit" value="send" />
+    </form>
+
+    <!-- section -->
+    <strong><br />driver send message<br /></strong>
+    <form id="send-form-message-driver">
+      <label for="send-form-message-driver-title"> Title </label>
+      <input id="send-form-message-driver-title" name="title" type="text" />
+      <label for="send-form-message-driver-content"> Message </label>
+      <textarea
+        id="send-form-message-driver-content"
+        cols="30"
+        rows="5"
+        name="content"
+      ></textarea>
+      <input type="submit" value="send" />
+    </form>
+
+    <!-- section -->
+    <strong><br />feedback buttons<br /></strong>
+    <button onclick="PMS.getAdmins()">Get All Admins</button>
+    <button onclick="PMS.getDrivers()">Get All Drivers</button>
+    <button onclick="PMS.getLots()">Get All Lots</button>
+    <button onclick="PMS.getRequests()">Get All Requests</button>
+    <button onclick="PMS.getPayments()">Get All Payments</button>
+    <button onclick="PMS.getMessages()">Get All Messages</button>
+
+    <script type="module" src="script/pms.js"></script>
+    <script type="text/javascript" src="script/index.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "name": "pms",
+  "version": "1.0.0",
+  "description": "Parking Management System",
+  "author": "Owusu K",
+  "license": "MIT",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": "./dist/index.modern.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "dev:debug": "microbundle watch --no-compress",
+    "test": "jest"
+  },
+  "homepage": "https://github.com/hiram-labs/parking-management-system#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiram-labs/parking-management-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hiram-labs/parking-management-system/issues"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "json-object-mapper": "^1.7.1",
+    "microbundle": "^0.13.3",
+    "reflect-metadata": "^0.1.13"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "decoratorsBeforeExport": true
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "./test/__setup__.js"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "./test/coverage",
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**",
+      "!**/*.{js,jsx}"
+    ]
+  }
+}
