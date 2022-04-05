@@ -1,0 +1,23 @@
+
+
+/* admin and user image css */ 
+.center_image {
+  text-align: center;
+  margin-top: 19%;
+}
+.admin_user_button {
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.admin_user_button img { 
+  width: 40%;
+  height: auto;
+}
+.admin_user_button:hover img {  /* hover over image to lower opacity */ 
+  opacity: 0.3;
+  cursor: pointer;
+}

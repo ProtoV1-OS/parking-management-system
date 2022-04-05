@@ -1,0 +1,85 @@
+
+/* admin page buttons */
+.admin_buttons {
+  justify-content: center;
+  margin-top: 5%;
+  width: 60%;
+  margin-left: 20%;
+}
+.admin_buttons button {
+  background-color: #ffffff;
+  border-style:solid;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 1%;
+}
+.admin_buttons button:hover {
+  background-color: #D0CECE;
+  cursor: pointer;
+}
+
+
+/* parking location options */
+#scroll::-webkit-scrollbar {
+	width: 5px;
+}
+#scroll::-webkit-scrollbar-thumb {
+	background-color: #00000079;
+  border-radius: 20px;
+}
+#scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 300px;
+}
+
+
+/* car park overview */
+.overview {
+  text-align: center;
+  float: left;
+  margin-left: 3%;
+  margin-top: 3%;
+  width: 17%;
+  border-style: solid;
+  border-color: gray;
+}
+
+/* car park details */
+.details {
+  float: right;
+  margin-right: 3%; 
+  margin-top: 3%;
+  width: 17%;
+  text-align: center;
+}
+/* car park buttons*/
+#navigate button {
+  background-color: #ffffff;
+  border-style:solid;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 2%;
+}
+#navigate button:hover {
+  background-color: #D0CECE;
+  cursor: pointer;
+}
+/* selected bay details */
+#selected_spot {
+  border-style:solid;
+  border-color: gray;
+  margin-top: 10%;
+  height: 200px;
+}
+
+/* car park bays*/
+#lot-selected-section > .content-injection {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+}

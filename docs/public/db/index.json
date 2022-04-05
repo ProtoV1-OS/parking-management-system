@@ -83,7 +83,7 @@
     {
       "uid": "4c2d2a10fbd2a",
       "ORM": "LOTS",
-      "name": "Medical Park",
+      "name": "Medical Centre : East Car Park",
       "coordinate": "00-00-01",
       "state": "opened",
       "spots": [
@@ -117,7 +117,7 @@
     {
       "uid": "0ffdc2aa29df7",
       "ORM": "LOTS",
-      "name": "Sports Park",
+      "name": "Sportspark : North Car Park",
       "coordinate": "00-00-02",
       "state": "opened",
       "spots": [

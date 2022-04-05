@@ -1,0 +1,71 @@
+
+body {
+  background-color: #F2F2F2
+}
+
+/* back button */ 
+.back_button {
+  display: inline-block;
+  bottom: auto;
+  width: auto;
+  height: auto;
+
+  position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.back_button img {
+  width: 18%;
+  height: 18%;
+  padding-right: 2%;
+}
+.back_button p {
+  text-align: center;
+  display: inline-flex;
+
+}
+.back_button:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+/* page header */ 
+.page_title {
+  text-align: center;
+  margin-top: 7%;
+}
+
+/* navigate back to startup */ 
+.startup_button {
+  position: absolute;
+    top: 5%;
+    left: 5%;
+    display: inline;
+}
+.startup_button img { 
+  width: 25%;
+  opacity: 0.3;
+  height: auto;
+}
+
+/* settings */
+.settings {
+  display: inline-block;
+  bottom: auto;
+  width: 10%;
+  height: auto;
+
+  position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-style: groove;
+    text-align: center;
+}
+.settings p{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.settings:hover {
+  background-color: #D0CECE;
+  cursor: pointer;
+}

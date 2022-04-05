@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+    <title>PMS - Admin</title>
+
+    <link rel="stylesheet" href="style/global.css">
     <link rel="stylesheet" href="style/main.css" />
-    <title>PMS - admin</title>
+    <link rel="stylesheet" href="style/admin.css" />
+
   </head>
+
   <body>
     <!-- Admin registration section -->
     <!-- <div class="page-section hidden">
@@ -25,10 +32,22 @@
       </form>
     </div> -->
 
+
     <!-- Admin login section -->
     <div id="admin-login-section" class="page-section">
-      <div><span>Sign In</span></div>
+
+      <h1 class="page_title">Sign In</h1> <!-- page title -->
+
+      <div class="startup_button">  <!-- navigate to startup -->
+        <a href="index.html">
+          <img src="style/user_image.png">
+        </a>
+        <div id="admin_name">
+        </div>
+      </div>
+      
       <form id="login-form-admin">
+        <div class="admin_buttons">
         <label for="login-form-admin-name"> Name </label>
         <input id="login-form-admin-name" name="name" type="text" />
         <label for="login-form-admin-password"> Password </label>
@@ -38,89 +57,139 @@
           name="password"
           autocomplete
         />
+        <br><br>
         <input type="submit" value="login" />
+      </div>
       </form>
+
     </div>
 
+    
     <!-- Admin home section -->
     <div id="admin-home-section" class="page-section hidden">
-      <div>
-        <span data-inner-admin-name>n/a</span>
+
+      <h1 class="page_title">Home</h1> <!-- page title -->
+
+      <div class="startup_button">  <!-- navigate to startup -->
+        <a href="index.html">
+          <img src="style/user_image.png">
+        </a>
+        <div id="admin_name">
+          <span data-inner-admin-name>n/a</span> <!-- admin name -->
+        </div>
+      </div>
+       
+      <div class="content-injection">
+        <div class="admin_buttons">
+          <button id="navigate-btn-lots-section">Parking Lots</button>
+          <button id="navigate-btn-requests-section">Requests</button>
+          <button id="navigate-btn-manage-users-section">Manage Users</button>
+          <button id="navigate-btn-messages-section">Messages</button>
+        </div>
+      </div>
+    
+      <div onclick="history.back()" class="back_button"> <!-- back button -->
+        <img src="style/back_arrow.png">
+        <p> Back</p>
       </div>
 
-      <div class="content-injection">
-        <button id="navigate-btn-lots-section">Parking Lots</button>
-        <button id="navigate-btn-requests-section">Requests</button>
-        <button id="navigate-btn-manage-users-section">Manage Users</button>
-        <button id="navigate-btn-messages-section">Messages</button>
-      </div>
     </div>
+
 
     <!-- Lot selection section -->
     <div id="lot-selection-section" class="page-section hidden">
-      <span data-inner-admin-name>n/a</span>
-      <div class="content-injection"></div>
+
+      <h1 class="page_title">Locations : Parking Lots</h1> <!-- page title -->
+      
+      <div class="startup_button">  <!-- navigate to startup -->
+        <a href="index.html">
+          <img src="style/user_image.png">
+        </a>
+        <div id="admin_name">
+          <span data-inner-admin-name>n/a</span> <!-- admin name -->
+        </div>
+      </div>
+
+      <div class="admin_buttons" id="scroll">
+        <div class="content-injection"></div>
+      </div>
+
+      <div onclick="history.back()" class="back_button"> <!-- back button -->
+        <img src="style/back_arrow.png">
+        <p> Back</p>
+      </div>
+
     </div>
 
     <!-- Selected lot grid section -->
     <div id="lot-selected-section" class="page-section hidden">
-      <div>
-        <span data-inner-admin-name>n/a</span>
+      
+      <div class="startup_button">  <!-- navigate to startup -->
+        <a href="index.html">
+          <img src="style/user_image.png">
+        </a>
+        <div id="admin_name">
+          <span data-inner-admin-name>n/a</span> <!-- admin name -->
+        </div>
       </div>
-
-      <div>
-        <span data-inner-lot-name>n/a</span>
-      </div>
-
-      <div class="sub-section">
-        <div><span>Details</span></div>
+     
+      <h1 class="page_title"> <span data-inner-lot-name>n/a</span> </h1>
+      
+      
+      <div class="overview">
+        <h4><div><span>Overview</span></div></h4>
         <div>
-          <span>ID:&nbsp;</span>
-          <span data-inner-lot-uid>n/a</span>
-        </div>
+          <span>ID:&nbsp;</span> <span data-inner-lot-uid>n/a</span>
+        </div> <br>
         <div>
-          <span>Coordinate:&nbsp;</span>
-          <span data-inner-lot-coordinate>n/a</span>
-        </div>
+          <span>Coordinate:&nbsp;</span> <span data-inner-lot-coordinate>n/a</span> 
+        </div> <br>
         <div>
-          <span>Total Spaces:&nbsp;</span><span data-inner-lot-spaces>0</span>
-        </div>
+          <span>Total Spaces:&nbsp;</span> <span data-inner-lot-spaces>0</span>
+        </div> <br>
         <div>
           <span>Opened Spaces:&nbsp;</span><span data-inner-spot-opened>0</span>
-        </div>
+        </div> <br>
         <div>
-          <span>Occupied Spaces:&nbsp;</span>
-          <span data-inner-spot-occupied>0</span>
-        </div>
+          <span>Occupied Spaces:&nbsp;</span> <span data-inner-spot-occupied>0</span>
+        </div> <br>
         <div>
-          <span>Reserved Spaces:&nbsp;</span
-          ><span data-inner-spot-reserved>0</span>
-        </div>
+          <span>Reserved Spaces:&nbsp;</span> <span data-inner-spot-reserved>0</span>
+        </div> <br>
       </div>
 
-      <div class="content-injection"></div>
-
-      <div class="sub-section">
-        <button id="navigate-btn-requests-section">Requests</button>
-        <button id="navigate-btn-manage-users-section">Manage Users</button>
-        <button id="navigate-btn-messages-section">Messages</button>
+      <div class="details">
+        <div id="navigate">
+          <button id="navigate-btn-requests-section">Requests</button>
+          <button id="navigate-btn-manage-users-section">Manage Users</button>
+          <button id="navigate-btn-messages-section">Messages</button>
+        </div>
         <!-- selected spot info -->
-        <div>
+        <div id="selected_spot">
           <div>
-            <div><span>Selected Spot</span></div>
+            <h4><div><span>Selected Spot</span></div></h4>
           </div>
           <div>
             <div><span>ID: </span><span data-inner-spot-uid>n/a</span></div>
-          </div>
+          </div> <br>
           <div>
             <div>
               <span>Status: </span><span data-inner-spot-state>n/a</span>
             </div>
-          </div>
+          </div> <br>
           <button id="action-btn-spot-reserved" disabled>Reserve</button>
           <button id="action-btn-spot-opened" disabled>Open</button>
         </div>
       </div>
+      
+      <div class="content-injection"></div>
+  
+      
+      <div onclick="history.back()" class="back_button"> <!-- back button -->
+        <img src="style/back_arrow.png">
+        <p> Back</p>
+      </div>
+
     </div>
 
     <!-- Admin actionable requests section -->
